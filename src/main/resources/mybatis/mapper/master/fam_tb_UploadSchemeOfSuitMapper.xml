@@ -1,0 +1,1652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.dao.fam_tb_UploadSchemeOfSuitMapper">
+  <resultMap id="BaseResultMap" type="com.demo.entity.fam_tb_UploadSchemeOfSuit">
+    <id column="Id" jdbcType="INTEGER" property="id" />
+    <result column="TaskId" jdbcType="INTEGER" property="taskid" />
+    <result column="Package" jdbcType="NVARCHAR" property="package" />
+    <result column="BeginDate" jdbcType="TIMESTAMP" property="begindate" />
+    <result column="SeqNo" jdbcType="INTEGER" property="seqno" />
+    <result column="PlnId" jdbcType="VARCHAR" property="plnid" />
+    <result column="CreateTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="Creator" jdbcType="VARCHAR" property="creator" />
+    <result column="ModifyTime" jdbcType="TIMESTAMP" property="modifytime" />
+    <result column="Modifier" jdbcType="VARCHAR" property="modifier" />
+    <result column="IsManual" jdbcType="BIT" property="ismanual" />
+    <result column="ContractNo" jdbcType="NVARCHAR" property="contractno" />
+    <result column="OrderCity" jdbcType="NVARCHAR" property="ordercity" />
+    <result column="City" jdbcType="NVARCHAR" property="city" />
+    <result column="AdCustomer" jdbcType="NVARCHAR" property="adcustomer" />
+    <result column="AdProduct" jdbcType="NVARCHAR" property="adproduct" />
+    <result column="AdContent" jdbcType="NVARCHAR" property="adcontent" />
+    <result column="AdStyle" jdbcType="NVARCHAR" property="adstyle" />
+    <result column="AdProperty" jdbcType="NVARCHAR" property="adproperty" />
+    <result column="AdType" jdbcType="NVARCHAR" property="adtype" />
+    <result column="AdLength" jdbcType="NVARCHAR" property="adlength" />
+    <result column="AdFrequency" jdbcType="SMALLINT" property="adfrequency" />
+    <result column="WeekFrequency" jdbcType="SMALLINT" property="weekfrequency" />
+    <result column="Starttime" jdbcType="TIMESTAMP" property="starttime" />
+    <result column="Endtime" jdbcType="TIMESTAMP" property="endtime" />
+    <result column="UploadState" jdbcType="SMALLINT" property="uploadstate" />
+    <result column="Uploadtor" jdbcType="VARCHAR" property="uploadtor" />
+    <result column="Uploadtime" jdbcType="TIMESTAMP" property="uploadtime" />
+    <result column="PublishId" jdbcType="INTEGER" property="publishid" />
+    <result column="PbVerNo" jdbcType="VARCHAR" property="pbverno" />
+    <result column="FSOCityNo" jdbcType="VARCHAR" property="fsocityno" />
+    <result column="FSOPackageNo" jdbcType="VARCHAR" property="fsopackageno" />
+    <result column="FromType" jdbcType="SMALLINT" property="fromtype" />
+    <result column="BaseFrequency" jdbcType="SMALLINT" property="basefrequency" />
+    <result column="AuditState" jdbcType="SMALLINT" property="auditstate" />
+    <result column="AuditRemark" jdbcType="VARCHAR" property="auditremark" />
+    <result column="Auditor" jdbcType="VARCHAR" property="auditor" />
+    <result column="Audittime" jdbcType="TIMESTAMP" property="audittime" />
+    <result column="MeiJieAuditState" jdbcType="SMALLINT" property="meijieauditstate" />
+    <result column="MeiJieAuditRemark" jdbcType="VARCHAR" property="meijieauditremark" />
+    <result column="MeiJieAuditor" jdbcType="VARCHAR" property="meijieauditor" />
+    <result column="MeiJieAudittime" jdbcType="TIMESTAMP" property="meijieaudittime" />
+    <result column="MeiJieUnAuditRemark" jdbcType="VARCHAR" property="meijieunauditremark" />
+    <result column="MeiJieUnAuditor" jdbcType="VARCHAR" property="meijieunauditor" />
+    <result column="MeiJieUnAudittime" jdbcType="TIMESTAMP" property="meijieunaudittime" />
+    <result column="ZhiZuoAuditState" jdbcType="SMALLINT" property="zhizuoauditstate" />
+    <result column="ZhiZuoAuditRemark" jdbcType="VARCHAR" property="zhizuoauditremark" />
+    <result column="ZhiZuoAuditor" jdbcType="VARCHAR" property="zhizuoauditor" />
+    <result column="ZhiZuoAudittime" jdbcType="TIMESTAMP" property="zhizuoaudittime" />
+    <result column="bySystem" jdbcType="VARCHAR" property="bysystem" />
+    <result column="CityNo" jdbcType="VARCHAR" property="cityno" />
+    <result column="PackageNo" jdbcType="VARCHAR" property="packageno" />
+    <result column="AdTypeNo" jdbcType="VARCHAR" property="adtypeno" />
+    <result column="FramediaCount" jdbcType="INTEGER" property="framediacount" />
+    <result column="Position" jdbcType="VARCHAR" property="position" />
+    <result column="ProductAttibute" jdbcType="VARCHAR" property="productattibute" />
+    <result column="IsBuQi" jdbcType="SMALLINT" property="isbuqi" />
+    <result column="District" jdbcType="VARCHAR" property="district" />
+    <result column="FSOStarttime" jdbcType="TIMESTAMP" property="fsostarttime" />
+    <result column="FSOEndtime" jdbcType="TIMESTAMP" property="fsoendtime" />
+    <result column="SeqNobak" jdbcType="INTEGER" property="seqnobak" />
+    <result column="ForbidCnt" jdbcType="INTEGER" property="forbidcnt" />
+    <result column="ExcludeFramediaCnt" jdbcType="INTEGER" property="excludeframediacnt" />
+    <result column="DesignationFramediaCnt" jdbcType="INTEGER" property="designationframediacnt" />
+    <result column="AuditBuildFramediaCnt" jdbcType="INTEGER" property="auditbuildframediacnt" />
+    <result column="ProductType" jdbcType="VARCHAR" property="producttype" />
+    <result column="UploadFramediaCounttime" jdbcType="TIMESTAMP" property="uploadframediacounttime" />
+    <result column="LCDPlnId" jdbcType="VARCHAR" property="lcdplnid" />
+    <result column="ProductPlayType" jdbcType="VARCHAR" property="productplaytype" />
+    <result column="InProportion" jdbcType="VARCHAR" property="inproportion" />
+    <result column="CopyRecord" jdbcType="INTEGER" property="copyrecord" />
+    <result column="A2CopyD3Flag" jdbcType="INTEGER" property="a2copyd3flag" />
+    <result column="Onlineinplay" jdbcType="INTEGER" property="onlineinplay" />
+    <result column="ModifyAdFrequency" jdbcType="INTEGER" property="modifyadfrequency" />
+    <result column="CtrAdContent" jdbcType="VARCHAR" property="ctradcontent" />
+    <result column="SelfUnion" jdbcType="NVARCHAR" property="selfunion" />
+    <result column="SelfAuder" jdbcType="NVARCHAR" property="selfauder" />
+    <result column="ScreenType" jdbcType="INTEGER" property="screentype" />
+    <result column="FromType_Source" jdbcType="INTEGER" property="fromtypeSource" />
+    <result column="PlayPicSeqNo" jdbcType="INTEGER" property="playpicseqno" />
+    <result column="ZhiZuoFinishtime" jdbcType="TIMESTAMP" property="zhizuofinishtime" />
+    <result column="ZhiZuoFinishFlag" jdbcType="INTEGER" property="zhizuofinishflag" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    Id, TaskId, Package, BeginDate, SeqNo, PlnId, CreateTime, Creator, ModifyTime, Modifier, 
+    IsManual, ContractNo, OrderCity, City, AdCustomer, AdProduct, AdContent, AdStyle, 
+    AdProperty, AdType, AdLength, AdFrequency, WeekFrequency, Starttime, Endtime, UploadState, 
+    Uploadtor, Uploadtime, PublishId, PbVerNo, FSOCityNo, FSOPackageNo, FromType, BaseFrequency, 
+    AuditState, AuditRemark, Auditor, Audittime, MeiJieAuditState, MeiJieAuditRemark, 
+    MeiJieAuditor, MeiJieAudittime, MeiJieUnAuditRemark, MeiJieUnAuditor, MeiJieUnAudittime, 
+    ZhiZuoAuditState, ZhiZuoAuditRemark, ZhiZuoAuditor, ZhiZuoAudittime, bySystem, CityNo, 
+    PackageNo, AdTypeNo, FramediaCount, Position, ProductAttibute, IsBuQi, District, 
+    FSOStarttime, FSOEndtime, SeqNobak, ForbidCnt, ExcludeFramediaCnt, DesignationFramediaCnt, 
+    AuditBuildFramediaCnt, ProductType, UploadFramediaCounttime, LCDPlnId, ProductPlayType, 
+    InProportion, CopyRecord, A2CopyD3Flag, Onlineinplay, ModifyAdFrequency, CtrAdContent, 
+    SelfUnion, SelfAuder, ScreenType, FromType_Source, PlayPicSeqNo, ZhiZuoFinishtime, 
+    ZhiZuoFinishFlag
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from fam_tb_UploadSchemeOfSuit
+    where Id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from fam_tb_UploadSchemeOfSuit
+    where Id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.demo.entity.fam_tb_UploadSchemeOfSuit">
+    insert into fam_tb_UploadSchemeOfSuit (Id, TaskId, Package, 
+      BeginDate, SeqNo, PlnId, 
+      CreateTime, Creator, ModifyTime, 
+      Modifier, IsManual, ContractNo, 
+      OrderCity, City, AdCustomer, 
+      AdProduct, AdContent, AdStyle, 
+      AdProperty, AdType, AdLength, 
+      AdFrequency, WeekFrequency, Starttime, 
+      Endtime, UploadState, Uploadtor, 
+      Uploadtime, PublishId, PbVerNo, 
+      FSOCityNo, FSOPackageNo, FromType, 
+      BaseFrequency, AuditState, AuditRemark, 
+      Auditor, Audittime, MeiJieAuditState, 
+      MeiJieAuditRemark, MeiJieAuditor, MeiJieAudittime, 
+      MeiJieUnAuditRemark, MeiJieUnAuditor, MeiJieUnAudittime, 
+      ZhiZuoAuditState, ZhiZuoAuditRemark, ZhiZuoAuditor, 
+      ZhiZuoAudittime, bySystem, CityNo, 
+      PackageNo, AdTypeNo, FramediaCount, 
+      Position, ProductAttibute, IsBuQi, 
+      District, FSOStarttime, FSOEndtime, 
+      SeqNobak, ForbidCnt, ExcludeFramediaCnt, 
+      DesignationFramediaCnt, AuditBuildFramediaCnt, 
+      ProductType, UploadFramediaCounttime, 
+      LCDPlnId, ProductPlayType, InProportion, 
+      CopyRecord, A2CopyD3Flag, Onlineinplay, 
+      ModifyAdFrequency, CtrAdContent, SelfUnion, 
+      SelfAuder, ScreenType, FromType_Source, 
+      PlayPicSeqNo, ZhiZuoFinishtime, ZhiZuoFinishFlag
+      )
+    values (#{id,jdbcType=INTEGER}, #{taskid,jdbcType=INTEGER}, #{package,jdbcType=NVARCHAR}, 
+      #{begindate,jdbcType=TIMESTAMP}, #{seqno,jdbcType=INTEGER}, #{plnid,jdbcType=VARCHAR}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{creator,jdbcType=VARCHAR}, #{modifytime,jdbcType=TIMESTAMP}, 
+      #{modifier,jdbcType=VARCHAR}, #{ismanual,jdbcType=BIT}, #{contractno,jdbcType=NVARCHAR}, 
+      #{ordercity,jdbcType=NVARCHAR}, #{city,jdbcType=NVARCHAR}, #{adcustomer,jdbcType=NVARCHAR}, 
+      #{adproduct,jdbcType=NVARCHAR}, #{adcontent,jdbcType=NVARCHAR}, #{adstyle,jdbcType=NVARCHAR}, 
+      #{adproperty,jdbcType=NVARCHAR}, #{adtype,jdbcType=NVARCHAR}, #{adlength,jdbcType=NVARCHAR}, 
+      #{adfrequency,jdbcType=SMALLINT}, #{weekfrequency,jdbcType=SMALLINT}, #{starttime,jdbcType=TIMESTAMP}, 
+      #{endtime,jdbcType=TIMESTAMP}, #{uploadstate,jdbcType=SMALLINT}, #{uploadtor,jdbcType=VARCHAR}, 
+      #{uploadtime,jdbcType=TIMESTAMP}, #{publishid,jdbcType=INTEGER}, #{pbverno,jdbcType=VARCHAR}, 
+      #{fsocityno,jdbcType=VARCHAR}, #{fsopackageno,jdbcType=VARCHAR}, #{fromtype,jdbcType=SMALLINT}, 
+      #{basefrequency,jdbcType=SMALLINT}, #{auditstate,jdbcType=SMALLINT}, #{auditremark,jdbcType=VARCHAR}, 
+      #{auditor,jdbcType=VARCHAR}, #{audittime,jdbcType=TIMESTAMP}, #{meijieauditstate,jdbcType=SMALLINT}, 
+      #{meijieauditremark,jdbcType=VARCHAR}, #{meijieauditor,jdbcType=VARCHAR}, #{meijieaudittime,jdbcType=TIMESTAMP}, 
+      #{meijieunauditremark,jdbcType=VARCHAR}, #{meijieunauditor,jdbcType=VARCHAR}, #{meijieunaudittime,jdbcType=TIMESTAMP}, 
+      #{zhizuoauditstate,jdbcType=SMALLINT}, #{zhizuoauditremark,jdbcType=VARCHAR}, #{zhizuoauditor,jdbcType=VARCHAR}, 
+      #{zhizuoaudittime,jdbcType=TIMESTAMP}, #{bysystem,jdbcType=VARCHAR}, #{cityno,jdbcType=VARCHAR}, 
+      #{packageno,jdbcType=VARCHAR}, #{adtypeno,jdbcType=VARCHAR}, #{framediacount,jdbcType=INTEGER}, 
+      #{position,jdbcType=VARCHAR}, #{productattibute,jdbcType=VARCHAR}, #{isbuqi,jdbcType=SMALLINT}, 
+      #{district,jdbcType=VARCHAR}, #{fsostarttime,jdbcType=TIMESTAMP}, #{fsoendtime,jdbcType=TIMESTAMP}, 
+      #{seqnobak,jdbcType=INTEGER}, #{forbidcnt,jdbcType=INTEGER}, #{excludeframediacnt,jdbcType=INTEGER}, 
+      #{designationframediacnt,jdbcType=INTEGER}, #{auditbuildframediacnt,jdbcType=INTEGER}, 
+      #{producttype,jdbcType=VARCHAR}, #{uploadframediacounttime,jdbcType=TIMESTAMP}, 
+      #{lcdplnid,jdbcType=VARCHAR}, #{productplaytype,jdbcType=VARCHAR}, #{inproportion,jdbcType=VARCHAR}, 
+      #{copyrecord,jdbcType=INTEGER}, #{a2copyd3flag,jdbcType=INTEGER}, #{onlineinplay,jdbcType=INTEGER}, 
+      #{modifyadfrequency,jdbcType=INTEGER}, #{ctradcontent,jdbcType=VARCHAR}, #{selfunion,jdbcType=NVARCHAR}, 
+      #{selfauder,jdbcType=NVARCHAR}, #{screentype,jdbcType=INTEGER}, #{fromtypeSource,jdbcType=INTEGER}, 
+      #{playpicseqno,jdbcType=INTEGER}, #{zhizuofinishtime,jdbcType=TIMESTAMP}, #{zhizuofinishflag,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.demo.entity.fam_tb_UploadSchemeOfSuit">
+    insert into fam_tb_UploadSchemeOfSuit
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        Id,
+      </if>
+      <if test="taskid != null">
+        TaskId,
+      </if>
+      <if test="package != null">
+        Package,
+      </if>
+      <if test="begindate != null">
+        BeginDate,
+      </if>
+      <if test="seqno != null">
+        SeqNo,
+      </if>
+      <if test="plnid != null">
+        PlnId,
+      </if>
+      <if test="createtime != null">
+        CreateTime,
+      </if>
+      <if test="creator != null">
+        Creator,
+      </if>
+      <if test="modifytime != null">
+        ModifyTime,
+      </if>
+      <if test="modifier != null">
+        Modifier,
+      </if>
+      <if test="ismanual != null">
+        IsManual,
+      </if>
+      <if test="contractno != null">
+        ContractNo,
+      </if>
+      <if test="ordercity != null">
+        OrderCity,
+      </if>
+      <if test="city != null">
+        City,
+      </if>
+      <if test="adcustomer != null">
+        AdCustomer,
+      </if>
+      <if test="adproduct != null">
+        AdProduct,
+      </if>
+      <if test="adcontent != null">
+        AdContent,
+      </if>
+      <if test="adstyle != null">
+        AdStyle,
+      </if>
+      <if test="adproperty != null">
+        AdProperty,
+      </if>
+      <if test="adtype != null">
+        AdType,
+      </if>
+      <if test="adlength != null">
+        AdLength,
+      </if>
+      <if test="adfrequency != null">
+        AdFrequency,
+      </if>
+      <if test="weekfrequency != null">
+        WeekFrequency,
+      </if>
+      <if test="starttime != null">
+        Starttime,
+      </if>
+      <if test="endtime != null">
+        Endtime,
+      </if>
+      <if test="uploadstate != null">
+        UploadState,
+      </if>
+      <if test="uploadtor != null">
+        Uploadtor,
+      </if>
+      <if test="uploadtime != null">
+        Uploadtime,
+      </if>
+      <if test="publishid != null">
+        PublishId,
+      </if>
+      <if test="pbverno != null">
+        PbVerNo,
+      </if>
+      <if test="fsocityno != null">
+        FSOCityNo,
+      </if>
+      <if test="fsopackageno != null">
+        FSOPackageNo,
+      </if>
+      <if test="fromtype != null">
+        FromType,
+      </if>
+      <if test="basefrequency != null">
+        BaseFrequency,
+      </if>
+      <if test="auditstate != null">
+        AuditState,
+      </if>
+      <if test="auditremark != null">
+        AuditRemark,
+      </if>
+      <if test="auditor != null">
+        Auditor,
+      </if>
+      <if test="audittime != null">
+        Audittime,
+      </if>
+      <if test="meijieauditstate != null">
+        MeiJieAuditState,
+      </if>
+      <if test="meijieauditremark != null">
+        MeiJieAuditRemark,
+      </if>
+      <if test="meijieauditor != null">
+        MeiJieAuditor,
+      </if>
+      <if test="meijieaudittime != null">
+        MeiJieAudittime,
+      </if>
+      <if test="meijieunauditremark != null">
+        MeiJieUnAuditRemark,
+      </if>
+      <if test="meijieunauditor != null">
+        MeiJieUnAuditor,
+      </if>
+      <if test="meijieunaudittime != null">
+        MeiJieUnAudittime,
+      </if>
+      <if test="zhizuoauditstate != null">
+        ZhiZuoAuditState,
+      </if>
+      <if test="zhizuoauditremark != null">
+        ZhiZuoAuditRemark,
+      </if>
+      <if test="zhizuoauditor != null">
+        ZhiZuoAuditor,
+      </if>
+      <if test="zhizuoaudittime != null">
+        ZhiZuoAudittime,
+      </if>
+      <if test="bysystem != null">
+        bySystem,
+      </if>
+      <if test="cityno != null">
+        CityNo,
+      </if>
+      <if test="packageno != null">
+        PackageNo,
+      </if>
+      <if test="adtypeno != null">
+        AdTypeNo,
+      </if>
+      <if test="framediacount != null">
+        FramediaCount,
+      </if>
+      <if test="position != null">
+        Position,
+      </if>
+      <if test="productattibute != null">
+        ProductAttibute,
+      </if>
+      <if test="isbuqi != null">
+        IsBuQi,
+      </if>
+      <if test="district != null">
+        District,
+      </if>
+      <if test="fsostarttime != null">
+        FSOStarttime,
+      </if>
+      <if test="fsoendtime != null">
+        FSOEndtime,
+      </if>
+      <if test="seqnobak != null">
+        SeqNobak,
+      </if>
+      <if test="forbidcnt != null">
+        ForbidCnt,
+      </if>
+      <if test="excludeframediacnt != null">
+        ExcludeFramediaCnt,
+      </if>
+      <if test="designationframediacnt != null">
+        DesignationFramediaCnt,
+      </if>
+      <if test="auditbuildframediacnt != null">
+        AuditBuildFramediaCnt,
+      </if>
+      <if test="producttype != null">
+        ProductType,
+      </if>
+      <if test="uploadframediacounttime != null">
+        UploadFramediaCounttime,
+      </if>
+      <if test="lcdplnid != null">
+        LCDPlnId,
+      </if>
+      <if test="productplaytype != null">
+        ProductPlayType,
+      </if>
+      <if test="inproportion != null">
+        InProportion,
+      </if>
+      <if test="copyrecord != null">
+        CopyRecord,
+      </if>
+      <if test="a2copyd3flag != null">
+        A2CopyD3Flag,
+      </if>
+      <if test="onlineinplay != null">
+        Onlineinplay,
+      </if>
+      <if test="modifyadfrequency != null">
+        ModifyAdFrequency,
+      </if>
+      <if test="ctradcontent != null">
+        CtrAdContent,
+      </if>
+      <if test="selfunion != null">
+        SelfUnion,
+      </if>
+      <if test="selfauder != null">
+        SelfAuder,
+      </if>
+      <if test="screentype != null">
+        ScreenType,
+      </if>
+      <if test="fromtypeSource != null">
+        FromType_Source,
+      </if>
+      <if test="playpicseqno != null">
+        PlayPicSeqNo,
+      </if>
+      <if test="zhizuofinishtime != null">
+        ZhiZuoFinishtime,
+      </if>
+      <if test="zhizuofinishflag != null">
+        ZhiZuoFinishFlag,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="taskid != null">
+        #{taskid,jdbcType=INTEGER},
+      </if>
+      <if test="package != null">
+        #{package,jdbcType=NVARCHAR},
+      </if>
+      <if test="begindate != null">
+        #{begindate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="seqno != null">
+        #{seqno,jdbcType=INTEGER},
+      </if>
+      <if test="plnid != null">
+        #{plnid,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="creator != null">
+        #{creator,jdbcType=VARCHAR},
+      </if>
+      <if test="modifytime != null">
+        #{modifytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifier != null">
+        #{modifier,jdbcType=VARCHAR},
+      </if>
+      <if test="ismanual != null">
+        #{ismanual,jdbcType=BIT},
+      </if>
+      <if test="contractno != null">
+        #{contractno,jdbcType=NVARCHAR},
+      </if>
+      <if test="ordercity != null">
+        #{ordercity,jdbcType=NVARCHAR},
+      </if>
+      <if test="city != null">
+        #{city,jdbcType=NVARCHAR},
+      </if>
+      <if test="adcustomer != null">
+        #{adcustomer,jdbcType=NVARCHAR},
+      </if>
+      <if test="adproduct != null">
+        #{adproduct,jdbcType=NVARCHAR},
+      </if>
+      <if test="adcontent != null">
+        #{adcontent,jdbcType=NVARCHAR},
+      </if>
+      <if test="adstyle != null">
+        #{adstyle,jdbcType=NVARCHAR},
+      </if>
+      <if test="adproperty != null">
+        #{adproperty,jdbcType=NVARCHAR},
+      </if>
+      <if test="adtype != null">
+        #{adtype,jdbcType=NVARCHAR},
+      </if>
+      <if test="adlength != null">
+        #{adlength,jdbcType=NVARCHAR},
+      </if>
+      <if test="adfrequency != null">
+        #{adfrequency,jdbcType=SMALLINT},
+      </if>
+      <if test="weekfrequency != null">
+        #{weekfrequency,jdbcType=SMALLINT},
+      </if>
+      <if test="starttime != null">
+        #{starttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endtime != null">
+        #{endtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="uploadstate != null">
+        #{uploadstate,jdbcType=SMALLINT},
+      </if>
+      <if test="uploadtor != null">
+        #{uploadtor,jdbcType=VARCHAR},
+      </if>
+      <if test="uploadtime != null">
+        #{uploadtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="publishid != null">
+        #{publishid,jdbcType=INTEGER},
+      </if>
+      <if test="pbverno != null">
+        #{pbverno,jdbcType=VARCHAR},
+      </if>
+      <if test="fsocityno != null">
+        #{fsocityno,jdbcType=VARCHAR},
+      </if>
+      <if test="fsopackageno != null">
+        #{fsopackageno,jdbcType=VARCHAR},
+      </if>
+      <if test="fromtype != null">
+        #{fromtype,jdbcType=SMALLINT},
+      </if>
+      <if test="basefrequency != null">
+        #{basefrequency,jdbcType=SMALLINT},
+      </if>
+      <if test="auditstate != null">
+        #{auditstate,jdbcType=SMALLINT},
+      </if>
+      <if test="auditremark != null">
+        #{auditremark,jdbcType=VARCHAR},
+      </if>
+      <if test="auditor != null">
+        #{auditor,jdbcType=VARCHAR},
+      </if>
+      <if test="audittime != null">
+        #{audittime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="meijieauditstate != null">
+        #{meijieauditstate,jdbcType=SMALLINT},
+      </if>
+      <if test="meijieauditremark != null">
+        #{meijieauditremark,jdbcType=VARCHAR},
+      </if>
+      <if test="meijieauditor != null">
+        #{meijieauditor,jdbcType=VARCHAR},
+      </if>
+      <if test="meijieaudittime != null">
+        #{meijieaudittime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="meijieunauditremark != null">
+        #{meijieunauditremark,jdbcType=VARCHAR},
+      </if>
+      <if test="meijieunauditor != null">
+        #{meijieunauditor,jdbcType=VARCHAR},
+      </if>
+      <if test="meijieunaudittime != null">
+        #{meijieunaudittime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="zhizuoauditstate != null">
+        #{zhizuoauditstate,jdbcType=SMALLINT},
+      </if>
+      <if test="zhizuoauditremark != null">
+        #{zhizuoauditremark,jdbcType=VARCHAR},
+      </if>
+      <if test="zhizuoauditor != null">
+        #{zhizuoauditor,jdbcType=VARCHAR},
+      </if>
+      <if test="zhizuoaudittime != null">
+        #{zhizuoaudittime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="bysystem != null">
+        #{bysystem,jdbcType=VARCHAR},
+      </if>
+      <if test="cityno != null">
+        #{cityno,jdbcType=VARCHAR},
+      </if>
+      <if test="packageno != null">
+        #{packageno,jdbcType=VARCHAR},
+      </if>
+      <if test="adtypeno != null">
+        #{adtypeno,jdbcType=VARCHAR},
+      </if>
+      <if test="framediacount != null">
+        #{framediacount,jdbcType=INTEGER},
+      </if>
+      <if test="position != null">
+        #{position,jdbcType=VARCHAR},
+      </if>
+      <if test="productattibute != null">
+        #{productattibute,jdbcType=VARCHAR},
+      </if>
+      <if test="isbuqi != null">
+        #{isbuqi,jdbcType=SMALLINT},
+      </if>
+      <if test="district != null">
+        #{district,jdbcType=VARCHAR},
+      </if>
+      <if test="fsostarttime != null">
+        #{fsostarttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fsoendtime != null">
+        #{fsoendtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="seqnobak != null">
+        #{seqnobak,jdbcType=INTEGER},
+      </if>
+      <if test="forbidcnt != null">
+        #{forbidcnt,jdbcType=INTEGER},
+      </if>
+      <if test="excludeframediacnt != null">
+        #{excludeframediacnt,jdbcType=INTEGER},
+      </if>
+      <if test="designationframediacnt != null">
+        #{designationframediacnt,jdbcType=INTEGER},
+      </if>
+      <if test="auditbuildframediacnt != null">
+        #{auditbuildframediacnt,jdbcType=INTEGER},
+      </if>
+      <if test="producttype != null">
+        #{producttype,jdbcType=VARCHAR},
+      </if>
+      <if test="uploadframediacounttime != null">
+        #{uploadframediacounttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lcdplnid != null">
+        #{lcdplnid,jdbcType=VARCHAR},
+      </if>
+      <if test="productplaytype != null">
+        #{productplaytype,jdbcType=VARCHAR},
+      </if>
+      <if test="inproportion != null">
+        #{inproportion,jdbcType=VARCHAR},
+      </if>
+      <if test="copyrecord != null">
+        #{copyrecord,jdbcType=INTEGER},
+      </if>
+      <if test="a2copyd3flag != null">
+        #{a2copyd3flag,jdbcType=INTEGER},
+      </if>
+      <if test="onlineinplay != null">
+        #{onlineinplay,jdbcType=INTEGER},
+      </if>
+      <if test="modifyadfrequency != null">
+        #{modifyadfrequency,jdbcType=INTEGER},
+      </if>
+      <if test="ctradcontent != null">
+        #{ctradcontent,jdbcType=VARCHAR},
+      </if>
+      <if test="selfunion != null">
+        #{selfunion,jdbcType=NVARCHAR},
+      </if>
+      <if test="selfauder != null">
+        #{selfauder,jdbcType=NVARCHAR},
+      </if>
+      <if test="screentype != null">
+        #{screentype,jdbcType=INTEGER},
+      </if>
+      <if test="fromtypeSource != null">
+        #{fromtypeSource,jdbcType=INTEGER},
+      </if>
+      <if test="playpicseqno != null">
+        #{playpicseqno,jdbcType=INTEGER},
+      </if>
+      <if test="zhizuofinishtime != null">
+        #{zhizuofinishtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="zhizuofinishflag != null">
+        #{zhizuofinishflag,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.demo.entity.fam_tb_UploadSchemeOfSuit">
+    update fam_tb_UploadSchemeOfSuit
+    <set>
+      <if test="taskid != null">
+        TaskId = #{taskid,jdbcType=INTEGER},
+      </if>
+      <if test="package != null">
+        Package = #{package,jdbcType=NVARCHAR},
+      </if>
+      <if test="begindate != null">
+        BeginDate = #{begindate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="seqno != null">
+        SeqNo = #{seqno,jdbcType=INTEGER},
+      </if>
+      <if test="plnid != null">
+        PlnId = #{plnid,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        CreateTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="creator != null">
+        Creator = #{creator,jdbcType=VARCHAR},
+      </if>
+      <if test="modifytime != null">
+        ModifyTime = #{modifytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifier != null">
+        Modifier = #{modifier,jdbcType=VARCHAR},
+      </if>
+      <if test="ismanual != null">
+        IsManual = #{ismanual,jdbcType=BIT},
+      </if>
+      <if test="contractno != null">
+        ContractNo = #{contractno,jdbcType=NVARCHAR},
+      </if>
+      <if test="ordercity != null">
+        OrderCity = #{ordercity,jdbcType=NVARCHAR},
+      </if>
+      <if test="city != null">
+        City = #{city,jdbcType=NVARCHAR},
+      </if>
+      <if test="adcustomer != null">
+        AdCustomer = #{adcustomer,jdbcType=NVARCHAR},
+      </if>
+      <if test="adproduct != null">
+        AdProduct = #{adproduct,jdbcType=NVARCHAR},
+      </if>
+      <if test="adcontent != null">
+        AdContent = #{adcontent,jdbcType=NVARCHAR},
+      </if>
+      <if test="adstyle != null">
+        AdStyle = #{adstyle,jdbcType=NVARCHAR},
+      </if>
+      <if test="adproperty != null">
+        AdProperty = #{adproperty,jdbcType=NVARCHAR},
+      </if>
+      <if test="adtype != null">
+        AdType = #{adtype,jdbcType=NVARCHAR},
+      </if>
+      <if test="adlength != null">
+        AdLength = #{adlength,jdbcType=NVARCHAR},
+      </if>
+      <if test="adfrequency != null">
+        AdFrequency = #{adfrequency,jdbcType=SMALLINT},
+      </if>
+      <if test="weekfrequency != null">
+        WeekFrequency = #{weekfrequency,jdbcType=SMALLINT},
+      </if>
+      <if test="starttime != null">
+        Starttime = #{starttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endtime != null">
+        Endtime = #{endtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="uploadstate != null">
+        UploadState = #{uploadstate,jdbcType=SMALLINT},
+      </if>
+      <if test="uploadtor != null">
+        Uploadtor = #{uploadtor,jdbcType=VARCHAR},
+      </if>
+      <if test="uploadtime != null">
+        Uploadtime = #{uploadtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="publishid != null">
+        PublishId = #{publishid,jdbcType=INTEGER},
+      </if>
+      <if test="pbverno != null">
+        PbVerNo = #{pbverno,jdbcType=VARCHAR},
+      </if>
+      <if test="fsocityno != null">
+        FSOCityNo = #{fsocityno,jdbcType=VARCHAR},
+      </if>
+      <if test="fsopackageno != null">
+        FSOPackageNo = #{fsopackageno,jdbcType=VARCHAR},
+      </if>
+      <if test="fromtype != null">
+        FromType = #{fromtype,jdbcType=SMALLINT},
+      </if>
+      <if test="basefrequency != null">
+        BaseFrequency = #{basefrequency,jdbcType=SMALLINT},
+      </if>
+      <if test="auditstate != null">
+        AuditState = #{auditstate,jdbcType=SMALLINT},
+      </if>
+      <if test="auditremark != null">
+        AuditRemark = #{auditremark,jdbcType=VARCHAR},
+      </if>
+      <if test="auditor != null">
+        Auditor = #{auditor,jdbcType=VARCHAR},
+      </if>
+      <if test="audittime != null">
+        Audittime = #{audittime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="meijieauditstate != null">
+        MeiJieAuditState = #{meijieauditstate,jdbcType=SMALLINT},
+      </if>
+      <if test="meijieauditremark != null">
+        MeiJieAuditRemark = #{meijieauditremark,jdbcType=VARCHAR},
+      </if>
+      <if test="meijieauditor != null">
+        MeiJieAuditor = #{meijieauditor,jdbcType=VARCHAR},
+      </if>
+      <if test="meijieaudittime != null">
+        MeiJieAudittime = #{meijieaudittime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="meijieunauditremark != null">
+        MeiJieUnAuditRemark = #{meijieunauditremark,jdbcType=VARCHAR},
+      </if>
+      <if test="meijieunauditor != null">
+        MeiJieUnAuditor = #{meijieunauditor,jdbcType=VARCHAR},
+      </if>
+      <if test="meijieunaudittime != null">
+        MeiJieUnAudittime = #{meijieunaudittime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="zhizuoauditstate != null">
+        ZhiZuoAuditState = #{zhizuoauditstate,jdbcType=SMALLINT},
+      </if>
+      <if test="zhizuoauditremark != null">
+        ZhiZuoAuditRemark = #{zhizuoauditremark,jdbcType=VARCHAR},
+      </if>
+      <if test="zhizuoauditor != null">
+        ZhiZuoAuditor = #{zhizuoauditor,jdbcType=VARCHAR},
+      </if>
+      <if test="zhizuoaudittime != null">
+        ZhiZuoAudittime = #{zhizuoaudittime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="bysystem != null">
+        bySystem = #{bysystem,jdbcType=VARCHAR},
+      </if>
+      <if test="cityno != null">
+        CityNo = #{cityno,jdbcType=VARCHAR},
+      </if>
+      <if test="packageno != null">
+        PackageNo = #{packageno,jdbcType=VARCHAR},
+      </if>
+      <if test="adtypeno != null">
+        AdTypeNo = #{adtypeno,jdbcType=VARCHAR},
+      </if>
+      <if test="framediacount != null">
+        FramediaCount = #{framediacount,jdbcType=INTEGER},
+      </if>
+      <if test="position != null">
+        Position = #{position,jdbcType=VARCHAR},
+      </if>
+      <if test="productattibute != null">
+        ProductAttibute = #{productattibute,jdbcType=VARCHAR},
+      </if>
+      <if test="isbuqi != null">
+        IsBuQi = #{isbuqi,jdbcType=SMALLINT},
+      </if>
+      <if test="district != null">
+        District = #{district,jdbcType=VARCHAR},
+      </if>
+      <if test="fsostarttime != null">
+        FSOStarttime = #{fsostarttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fsoendtime != null">
+        FSOEndtime = #{fsoendtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="seqnobak != null">
+        SeqNobak = #{seqnobak,jdbcType=INTEGER},
+      </if>
+      <if test="forbidcnt != null">
+        ForbidCnt = #{forbidcnt,jdbcType=INTEGER},
+      </if>
+      <if test="excludeframediacnt != null">
+        ExcludeFramediaCnt = #{excludeframediacnt,jdbcType=INTEGER},
+      </if>
+      <if test="designationframediacnt != null">
+        DesignationFramediaCnt = #{designationframediacnt,jdbcType=INTEGER},
+      </if>
+      <if test="auditbuildframediacnt != null">
+        AuditBuildFramediaCnt = #{auditbuildframediacnt,jdbcType=INTEGER},
+      </if>
+      <if test="producttype != null">
+        ProductType = #{producttype,jdbcType=VARCHAR},
+      </if>
+      <if test="uploadframediacounttime != null">
+        UploadFramediaCounttime = #{uploadframediacounttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lcdplnid != null">
+        LCDPlnId = #{lcdplnid,jdbcType=VARCHAR},
+      </if>
+      <if test="productplaytype != null">
+        ProductPlayType = #{productplaytype,jdbcType=VARCHAR},
+      </if>
+      <if test="inproportion != null">
+        InProportion = #{inproportion,jdbcType=VARCHAR},
+      </if>
+      <if test="copyrecord != null">
+        CopyRecord = #{copyrecord,jdbcType=INTEGER},
+      </if>
+      <if test="a2copyd3flag != null">
+        A2CopyD3Flag = #{a2copyd3flag,jdbcType=INTEGER},
+      </if>
+      <if test="onlineinplay != null">
+        Onlineinplay = #{onlineinplay,jdbcType=INTEGER},
+      </if>
+      <if test="modifyadfrequency != null">
+        ModifyAdFrequency = #{modifyadfrequency,jdbcType=INTEGER},
+      </if>
+      <if test="ctradcontent != null">
+        CtrAdContent = #{ctradcontent,jdbcType=VARCHAR},
+      </if>
+      <if test="selfunion != null">
+        SelfUnion = #{selfunion,jdbcType=NVARCHAR},
+      </if>
+      <if test="selfauder != null">
+        SelfAuder = #{selfauder,jdbcType=NVARCHAR},
+      </if>
+      <if test="screentype != null">
+        ScreenType = #{screentype,jdbcType=INTEGER},
+      </if>
+      <if test="fromtypeSource != null">
+        FromType_Source = #{fromtypeSource,jdbcType=INTEGER},
+      </if>
+      <if test="playpicseqno != null">
+        PlayPicSeqNo = #{playpicseqno,jdbcType=INTEGER},
+      </if>
+      <if test="zhizuofinishtime != null">
+        ZhiZuoFinishtime = #{zhizuofinishtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="zhizuofinishflag != null">
+        ZhiZuoFinishFlag = #{zhizuofinishflag,jdbcType=INTEGER},
+      </if>
+    </set>
+    where Id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.demo.entity.fam_tb_UploadSchemeOfSuit">
+    update fam_tb_UploadSchemeOfSuit
+    set TaskId = #{taskid,jdbcType=INTEGER},
+      Package = #{package,jdbcType=NVARCHAR},
+      BeginDate = #{begindate,jdbcType=TIMESTAMP},
+      SeqNo = #{seqno,jdbcType=INTEGER},
+      PlnId = #{plnid,jdbcType=VARCHAR},
+      CreateTime = #{createtime,jdbcType=TIMESTAMP},
+      Creator = #{creator,jdbcType=VARCHAR},
+      ModifyTime = #{modifytime,jdbcType=TIMESTAMP},
+      Modifier = #{modifier,jdbcType=VARCHAR},
+      IsManual = #{ismanual,jdbcType=BIT},
+      ContractNo = #{contractno,jdbcType=NVARCHAR},
+      OrderCity = #{ordercity,jdbcType=NVARCHAR},
+      City = #{city,jdbcType=NVARCHAR},
+      AdCustomer = #{adcustomer,jdbcType=NVARCHAR},
+      AdProduct = #{adproduct,jdbcType=NVARCHAR},
+      AdContent = #{adcontent,jdbcType=NVARCHAR},
+      AdStyle = #{adstyle,jdbcType=NVARCHAR},
+      AdProperty = #{adproperty,jdbcType=NVARCHAR},
+      AdType = #{adtype,jdbcType=NVARCHAR},
+      AdLength = #{adlength,jdbcType=NVARCHAR},
+      AdFrequency = #{adfrequency,jdbcType=SMALLINT},
+      WeekFrequency = #{weekfrequency,jdbcType=SMALLINT},
+      Starttime = #{starttime,jdbcType=TIMESTAMP},
+      Endtime = #{endtime,jdbcType=TIMESTAMP},
+      UploadState = #{uploadstate,jdbcType=SMALLINT},
+      Uploadtor = #{uploadtor,jdbcType=VARCHAR},
+      Uploadtime = #{uploadtime,jdbcType=TIMESTAMP},
+      PublishId = #{publishid,jdbcType=INTEGER},
+      PbVerNo = #{pbverno,jdbcType=VARCHAR},
+      FSOCityNo = #{fsocityno,jdbcType=VARCHAR},
+      FSOPackageNo = #{fsopackageno,jdbcType=VARCHAR},
+      FromType = #{fromtype,jdbcType=SMALLINT},
+      BaseFrequency = #{basefrequency,jdbcType=SMALLINT},
+      AuditState = #{auditstate,jdbcType=SMALLINT},
+      AuditRemark = #{auditremark,jdbcType=VARCHAR},
+      Auditor = #{auditor,jdbcType=VARCHAR},
+      Audittime = #{audittime,jdbcType=TIMESTAMP},
+      MeiJieAuditState = #{meijieauditstate,jdbcType=SMALLINT},
+      MeiJieAuditRemark = #{meijieauditremark,jdbcType=VARCHAR},
+      MeiJieAuditor = #{meijieauditor,jdbcType=VARCHAR},
+      MeiJieAudittime = #{meijieaudittime,jdbcType=TIMESTAMP},
+      MeiJieUnAuditRemark = #{meijieunauditremark,jdbcType=VARCHAR},
+      MeiJieUnAuditor = #{meijieunauditor,jdbcType=VARCHAR},
+      MeiJieUnAudittime = #{meijieunaudittime,jdbcType=TIMESTAMP},
+      ZhiZuoAuditState = #{zhizuoauditstate,jdbcType=SMALLINT},
+      ZhiZuoAuditRemark = #{zhizuoauditremark,jdbcType=VARCHAR},
+      ZhiZuoAuditor = #{zhizuoauditor,jdbcType=VARCHAR},
+      ZhiZuoAudittime = #{zhizuoaudittime,jdbcType=TIMESTAMP},
+      bySystem = #{bysystem,jdbcType=VARCHAR},
+      CityNo = #{cityno,jdbcType=VARCHAR},
+      PackageNo = #{packageno,jdbcType=VARCHAR},
+      AdTypeNo = #{adtypeno,jdbcType=VARCHAR},
+      FramediaCount = #{framediacount,jdbcType=INTEGER},
+      Position = #{position,jdbcType=VARCHAR},
+      ProductAttibute = #{productattibute,jdbcType=VARCHAR},
+      IsBuQi = #{isbuqi,jdbcType=SMALLINT},
+      District = #{district,jdbcType=VARCHAR},
+      FSOStarttime = #{fsostarttime,jdbcType=TIMESTAMP},
+      FSOEndtime = #{fsoendtime,jdbcType=TIMESTAMP},
+      SeqNobak = #{seqnobak,jdbcType=INTEGER},
+      ForbidCnt = #{forbidcnt,jdbcType=INTEGER},
+      ExcludeFramediaCnt = #{excludeframediacnt,jdbcType=INTEGER},
+      DesignationFramediaCnt = #{designationframediacnt,jdbcType=INTEGER},
+      AuditBuildFramediaCnt = #{auditbuildframediacnt,jdbcType=INTEGER},
+      ProductType = #{producttype,jdbcType=VARCHAR},
+      UploadFramediaCounttime = #{uploadframediacounttime,jdbcType=TIMESTAMP},
+      LCDPlnId = #{lcdplnid,jdbcType=VARCHAR},
+      ProductPlayType = #{productplaytype,jdbcType=VARCHAR},
+      InProportion = #{inproportion,jdbcType=VARCHAR},
+      CopyRecord = #{copyrecord,jdbcType=INTEGER},
+      A2CopyD3Flag = #{a2copyd3flag,jdbcType=INTEGER},
+      Onlineinplay = #{onlineinplay,jdbcType=INTEGER},
+      ModifyAdFrequency = #{modifyadfrequency,jdbcType=INTEGER},
+      CtrAdContent = #{ctradcontent,jdbcType=VARCHAR},
+      SelfUnion = #{selfunion,jdbcType=NVARCHAR},
+      SelfAuder = #{selfauder,jdbcType=NVARCHAR},
+      ScreenType = #{screentype,jdbcType=INTEGER},
+      FromType_Source = #{fromtypeSource,jdbcType=INTEGER},
+      PlayPicSeqNo = #{playpicseqno,jdbcType=INTEGER},
+      ZhiZuoFinishtime = #{zhizuofinishtime,jdbcType=TIMESTAMP},
+      ZhiZuoFinishFlag = #{zhizuofinishflag,jdbcType=INTEGER}
+    where Id = #{id,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.demo.entity.fam_tb_UploadSchemeOfSuit">
+    <result column="Id" jdbcType="INTEGER" property="id" />
+    <result column="TaskId" jdbcType="INTEGER" property="taskid" />
+    <result column="Package" jdbcType="NVARCHAR" property="package" />
+    <result column="BeginDate" jdbcType="TIMESTAMP" property="begindate" />
+    <result column="SeqNo" jdbcType="INTEGER" property="seqno" />
+    <result column="PlnId" jdbcType="VARCHAR" property="plnid" />
+    <result column="CreateTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="Creator" jdbcType="VARCHAR" property="creator" />
+    <result column="ModifyTime" jdbcType="TIMESTAMP" property="modifytime" />
+    <result column="Modifier" jdbcType="VARCHAR" property="modifier" />
+    <result column="IsManual" jdbcType="BIT" property="ismanual" />
+    <result column="ContractNo" jdbcType="NVARCHAR" property="contractno" />
+    <result column="OrderCity" jdbcType="NVARCHAR" property="ordercity" />
+    <result column="City" jdbcType="NVARCHAR" property="city" />
+    <result column="AdCustomer" jdbcType="NVARCHAR" property="adcustomer" />
+    <result column="AdProduct" jdbcType="NVARCHAR" property="adproduct" />
+    <result column="AdContent" jdbcType="NVARCHAR" property="adcontent" />
+    <result column="AdStyle" jdbcType="NVARCHAR" property="adstyle" />
+    <result column="AdProperty" jdbcType="NVARCHAR" property="adproperty" />
+    <result column="AdType" jdbcType="NVARCHAR" property="adtype" />
+    <result column="AdLength" jdbcType="NVARCHAR" property="adlength" />
+    <result column="AdFrequency" jdbcType="SMALLINT" property="adfrequency" />
+    <result column="WeekFrequency" jdbcType="SMALLINT" property="weekfrequency" />
+    <result column="Starttime" jdbcType="TIMESTAMP" property="starttime" />
+    <result column="Endtime" jdbcType="TIMESTAMP" property="endtime" />
+    <result column="UploadState" jdbcType="SMALLINT" property="uploadstate" />
+    <result column="Uploadtor" jdbcType="VARCHAR" property="uploadtor" />
+    <result column="Uploadtime" jdbcType="TIMESTAMP" property="uploadtime" />
+    <result column="PublishId" jdbcType="INTEGER" property="publishid" />
+    <result column="PbVerNo" jdbcType="VARCHAR" property="pbverno" />
+    <result column="FSOCityNo" jdbcType="VARCHAR" property="fsocityno" />
+    <result column="FSOPackageNo" jdbcType="VARCHAR" property="fsopackageno" />
+    <result column="FromType" jdbcType="SMALLINT" property="fromtype" />
+    <result column="BaseFrequency" jdbcType="SMALLINT" property="basefrequency" />
+    <result column="AuditState" jdbcType="SMALLINT" property="auditstate" />
+    <result column="AuditRemark" jdbcType="VARCHAR" property="auditremark" />
+    <result column="Auditor" jdbcType="VARCHAR" property="auditor" />
+    <result column="Audittime" jdbcType="TIMESTAMP" property="audittime" />
+    <result column="MeiJieAuditState" jdbcType="SMALLINT" property="meijieauditstate" />
+    <result column="MeiJieAuditRemark" jdbcType="VARCHAR" property="meijieauditremark" />
+    <result column="MeiJieAuditor" jdbcType="VARCHAR" property="meijieauditor" />
+    <result column="MeiJieAudittime" jdbcType="TIMESTAMP" property="meijieaudittime" />
+    <result column="MeiJieUnAuditRemark" jdbcType="VARCHAR" property="meijieunauditremark" />
+    <result column="MeiJieUnAuditor" jdbcType="VARCHAR" property="meijieunauditor" />
+    <result column="MeiJieUnAudittime" jdbcType="TIMESTAMP" property="meijieunaudittime" />
+    <result column="ZhiZuoAuditState" jdbcType="SMALLINT" property="zhizuoauditstate" />
+    <result column="ZhiZuoAuditRemark" jdbcType="VARCHAR" property="zhizuoauditremark" />
+    <result column="ZhiZuoAuditor" jdbcType="VARCHAR" property="zhizuoauditor" />
+    <result column="ZhiZuoAudittime" jdbcType="TIMESTAMP" property="zhizuoaudittime" />
+    <result column="bySystem" jdbcType="VARCHAR" property="bysystem" />
+    <result column="CityNo" jdbcType="VARCHAR" property="cityno" />
+    <result column="PackageNo" jdbcType="VARCHAR" property="packageno" />
+    <result column="AdTypeNo" jdbcType="VARCHAR" property="adtypeno" />
+    <result column="FramediaCount" jdbcType="INTEGER" property="framediacount" />
+    <result column="Position" jdbcType="VARCHAR" property="position" />
+    <result column="ProductAttibute" jdbcType="VARCHAR" property="productattibute" />
+    <result column="IsBuQi" jdbcType="SMALLINT" property="isbuqi" />
+    <result column="District" jdbcType="VARCHAR" property="district" />
+    <result column="FSOStarttime" jdbcType="TIMESTAMP" property="fsostarttime" />
+    <result column="FSOEndtime" jdbcType="TIMESTAMP" property="fsoendtime" />
+    <result column="SeqNobak" jdbcType="INTEGER" property="seqnobak" />
+    <result column="ForbidCnt" jdbcType="INTEGER" property="forbidcnt" />
+    <result column="ExcludeFramediaCnt" jdbcType="INTEGER" property="excludeframediacnt" />
+    <result column="DesignationFramediaCnt" jdbcType="INTEGER" property="designationframediacnt" />
+    <result column="AuditBuildFramediaCnt" jdbcType="INTEGER" property="auditbuildframediacnt" />
+    <result column="ProductType" jdbcType="VARCHAR" property="producttype" />
+    <result column="UploadFramediaCounttime" jdbcType="TIMESTAMP" property="uploadframediacounttime" />
+    <result column="LCDPlnId" jdbcType="VARCHAR" property="lcdplnid" />
+    <result column="ProductPlayType" jdbcType="VARCHAR" property="productplaytype" />
+    <result column="InProportion" jdbcType="VARCHAR" property="inproportion" />
+    <result column="CopyRecord" jdbcType="INTEGER" property="copyrecord" />
+    <result column="A2CopyD3Flag" jdbcType="INTEGER" property="a2copyd3flag" />
+    <result column="Onlineinplay" jdbcType="INTEGER" property="onlineinplay" />
+    <result column="ModifyAdFrequency" jdbcType="INTEGER" property="modifyadfrequency" />
+    <result column="CtrAdContent" jdbcType="VARCHAR" property="ctradcontent" />
+    <result column="SelfUnion" jdbcType="NVARCHAR" property="selfunion" />
+    <result column="SelfAuder" jdbcType="NVARCHAR" property="selfauder" />
+    <result column="ScreenType" jdbcType="INTEGER" property="screentype" />
+    <result column="FromType_Source" jdbcType="INTEGER" property="fromtypeSource" />
+    <result column="PlayPicSeqNo" jdbcType="INTEGER" property="playpicseqno" />
+    <result column="ZhiZuoFinishtime" jdbcType="TIMESTAMP" property="zhizuofinishtime" />
+    <result column="ZhiZuoFinishFlag" jdbcType="INTEGER" property="zhizuofinishflag" />
+  </resultMap>
+  <insert id="insert" parameterType="com.demo.entity.fam_tb_UploadSchemeOfSuit">
+    insert into fam_tb_UploadSchemeOfSuit (Id, TaskId, Package, 
+      BeginDate, SeqNo, PlnId, 
+      CreateTime, Creator, ModifyTime, 
+      Modifier, IsManual, ContractNo, 
+      OrderCity, City, AdCustomer, 
+      AdProduct, AdContent, AdStyle, 
+      AdProperty, AdType, AdLength, 
+      AdFrequency, WeekFrequency, Starttime, 
+      Endtime, UploadState, Uploadtor, 
+      Uploadtime, PublishId, PbVerNo, 
+      FSOCityNo, FSOPackageNo, FromType, 
+      BaseFrequency, AuditState, AuditRemark, 
+      Auditor, Audittime, MeiJieAuditState, 
+      MeiJieAuditRemark, MeiJieAuditor, MeiJieAudittime, 
+      MeiJieUnAuditRemark, MeiJieUnAuditor, MeiJieUnAudittime, 
+      ZhiZuoAuditState, ZhiZuoAuditRemark, ZhiZuoAuditor, 
+      ZhiZuoAudittime, bySystem, CityNo, 
+      PackageNo, AdTypeNo, FramediaCount, 
+      Position, ProductAttibute, IsBuQi, 
+      District, FSOStarttime, FSOEndtime, 
+      SeqNobak, ForbidCnt, ExcludeFramediaCnt, 
+      DesignationFramediaCnt, AuditBuildFramediaCnt, 
+      ProductType, UploadFramediaCounttime, 
+      LCDPlnId, ProductPlayType, InProportion, 
+      CopyRecord, A2CopyD3Flag, Onlineinplay, 
+      ModifyAdFrequency, CtrAdContent, SelfUnion, 
+      SelfAuder, ScreenType, FromType_Source, 
+      PlayPicSeqNo, ZhiZuoFinishtime, ZhiZuoFinishFlag
+      )
+    values (#{id,jdbcType=INTEGER}, #{taskid,jdbcType=INTEGER}, #{package,jdbcType=NVARCHAR}, 
+      #{begindate,jdbcType=TIMESTAMP}, #{seqno,jdbcType=INTEGER}, #{plnid,jdbcType=VARCHAR}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{creator,jdbcType=VARCHAR}, #{modifytime,jdbcType=TIMESTAMP}, 
+      #{modifier,jdbcType=VARCHAR}, #{ismanual,jdbcType=BIT}, #{contractno,jdbcType=NVARCHAR}, 
+      #{ordercity,jdbcType=NVARCHAR}, #{city,jdbcType=NVARCHAR}, #{adcustomer,jdbcType=NVARCHAR}, 
+      #{adproduct,jdbcType=NVARCHAR}, #{adcontent,jdbcType=NVARCHAR}, #{adstyle,jdbcType=NVARCHAR}, 
+      #{adproperty,jdbcType=NVARCHAR}, #{adtype,jdbcType=NVARCHAR}, #{adlength,jdbcType=NVARCHAR}, 
+      #{adfrequency,jdbcType=SMALLINT}, #{weekfrequency,jdbcType=SMALLINT}, #{starttime,jdbcType=TIMESTAMP}, 
+      #{endtime,jdbcType=TIMESTAMP}, #{uploadstate,jdbcType=SMALLINT}, #{uploadtor,jdbcType=VARCHAR}, 
+      #{uploadtime,jdbcType=TIMESTAMP}, #{publishid,jdbcType=INTEGER}, #{pbverno,jdbcType=VARCHAR}, 
+      #{fsocityno,jdbcType=VARCHAR}, #{fsopackageno,jdbcType=VARCHAR}, #{fromtype,jdbcType=SMALLINT}, 
+      #{basefrequency,jdbcType=SMALLINT}, #{auditstate,jdbcType=SMALLINT}, #{auditremark,jdbcType=VARCHAR}, 
+      #{auditor,jdbcType=VARCHAR}, #{audittime,jdbcType=TIMESTAMP}, #{meijieauditstate,jdbcType=SMALLINT}, 
+      #{meijieauditremark,jdbcType=VARCHAR}, #{meijieauditor,jdbcType=VARCHAR}, #{meijieaudittime,jdbcType=TIMESTAMP}, 
+      #{meijieunauditremark,jdbcType=VARCHAR}, #{meijieunauditor,jdbcType=VARCHAR}, #{meijieunaudittime,jdbcType=TIMESTAMP}, 
+      #{zhizuoauditstate,jdbcType=SMALLINT}, #{zhizuoauditremark,jdbcType=VARCHAR}, #{zhizuoauditor,jdbcType=VARCHAR}, 
+      #{zhizuoaudittime,jdbcType=TIMESTAMP}, #{bysystem,jdbcType=VARCHAR}, #{cityno,jdbcType=VARCHAR}, 
+      #{packageno,jdbcType=VARCHAR}, #{adtypeno,jdbcType=VARCHAR}, #{framediacount,jdbcType=INTEGER}, 
+      #{position,jdbcType=VARCHAR}, #{productattibute,jdbcType=VARCHAR}, #{isbuqi,jdbcType=SMALLINT}, 
+      #{district,jdbcType=VARCHAR}, #{fsostarttime,jdbcType=TIMESTAMP}, #{fsoendtime,jdbcType=TIMESTAMP}, 
+      #{seqnobak,jdbcType=INTEGER}, #{forbidcnt,jdbcType=INTEGER}, #{excludeframediacnt,jdbcType=INTEGER}, 
+      #{designationframediacnt,jdbcType=INTEGER}, #{auditbuildframediacnt,jdbcType=INTEGER}, 
+      #{producttype,jdbcType=VARCHAR}, #{uploadframediacounttime,jdbcType=TIMESTAMP}, 
+      #{lcdplnid,jdbcType=VARCHAR}, #{productplaytype,jdbcType=VARCHAR}, #{inproportion,jdbcType=VARCHAR}, 
+      #{copyrecord,jdbcType=INTEGER}, #{a2copyd3flag,jdbcType=INTEGER}, #{onlineinplay,jdbcType=INTEGER}, 
+      #{modifyadfrequency,jdbcType=INTEGER}, #{ctradcontent,jdbcType=VARCHAR}, #{selfunion,jdbcType=NVARCHAR}, 
+      #{selfauder,jdbcType=NVARCHAR}, #{screentype,jdbcType=INTEGER}, #{fromtypeSource,jdbcType=INTEGER}, 
+      #{playpicseqno,jdbcType=INTEGER}, #{zhizuofinishtime,jdbcType=TIMESTAMP}, #{zhizuofinishflag,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.demo.entity.fam_tb_UploadSchemeOfSuit">
+    insert into fam_tb_UploadSchemeOfSuit
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        Id,
+      </if>
+      <if test="taskid != null">
+        TaskId,
+      </if>
+      <if test="package != null">
+        Package,
+      </if>
+      <if test="begindate != null">
+        BeginDate,
+      </if>
+      <if test="seqno != null">
+        SeqNo,
+      </if>
+      <if test="plnid != null">
+        PlnId,
+      </if>
+      <if test="createtime != null">
+        CreateTime,
+      </if>
+      <if test="creator != null">
+        Creator,
+      </if>
+      <if test="modifytime != null">
+        ModifyTime,
+      </if>
+      <if test="modifier != null">
+        Modifier,
+      </if>
+      <if test="ismanual != null">
+        IsManual,
+      </if>
+      <if test="contractno != null">
+        ContractNo,
+      </if>
+      <if test="ordercity != null">
+        OrderCity,
+      </if>
+      <if test="city != null">
+        City,
+      </if>
+      <if test="adcustomer != null">
+        AdCustomer,
+      </if>
+      <if test="adproduct != null">
+        AdProduct,
+      </if>
+      <if test="adcontent != null">
+        AdContent,
+      </if>
+      <if test="adstyle != null">
+        AdStyle,
+      </if>
+      <if test="adproperty != null">
+        AdProperty,
+      </if>
+      <if test="adtype != null">
+        AdType,
+      </if>
+      <if test="adlength != null">
+        AdLength,
+      </if>
+      <if test="adfrequency != null">
+        AdFrequency,
+      </if>
+      <if test="weekfrequency != null">
+        WeekFrequency,
+      </if>
+      <if test="starttime != null">
+        Starttime,
+      </if>
+      <if test="endtime != null">
+        Endtime,
+      </if>
+      <if test="uploadstate != null">
+        UploadState,
+      </if>
+      <if test="uploadtor != null">
+        Uploadtor,
+      </if>
+      <if test="uploadtime != null">
+        Uploadtime,
+      </if>
+      <if test="publishid != null">
+        PublishId,
+      </if>
+      <if test="pbverno != null">
+        PbVerNo,
+      </if>
+      <if test="fsocityno != null">
+        FSOCityNo,
+      </if>
+      <if test="fsopackageno != null">
+        FSOPackageNo,
+      </if>
+      <if test="fromtype != null">
+        FromType,
+      </if>
+      <if test="basefrequency != null">
+        BaseFrequency,
+      </if>
+      <if test="auditstate != null">
+        AuditState,
+      </if>
+      <if test="auditremark != null">
+        AuditRemark,
+      </if>
+      <if test="auditor != null">
+        Auditor,
+      </if>
+      <if test="audittime != null">
+        Audittime,
+      </if>
+      <if test="meijieauditstate != null">
+        MeiJieAuditState,
+      </if>
+      <if test="meijieauditremark != null">
+        MeiJieAuditRemark,
+      </if>
+      <if test="meijieauditor != null">
+        MeiJieAuditor,
+      </if>
+      <if test="meijieaudittime != null">
+        MeiJieAudittime,
+      </if>
+      <if test="meijieunauditremark != null">
+        MeiJieUnAuditRemark,
+      </if>
+      <if test="meijieunauditor != null">
+        MeiJieUnAuditor,
+      </if>
+      <if test="meijieunaudittime != null">
+        MeiJieUnAudittime,
+      </if>
+      <if test="zhizuoauditstate != null">
+        ZhiZuoAuditState,
+      </if>
+      <if test="zhizuoauditremark != null">
+        ZhiZuoAuditRemark,
+      </if>
+      <if test="zhizuoauditor != null">
+        ZhiZuoAuditor,
+      </if>
+      <if test="zhizuoaudittime != null">
+        ZhiZuoAudittime,
+      </if>
+      <if test="bysystem != null">
+        bySystem,
+      </if>
+      <if test="cityno != null">
+        CityNo,
+      </if>
+      <if test="packageno != null">
+        PackageNo,
+      </if>
+      <if test="adtypeno != null">
+        AdTypeNo,
+      </if>
+      <if test="framediacount != null">
+        FramediaCount,
+      </if>
+      <if test="position != null">
+        Position,
+      </if>
+      <if test="productattibute != null">
+        ProductAttibute,
+      </if>
+      <if test="isbuqi != null">
+        IsBuQi,
+      </if>
+      <if test="district != null">
+        District,
+      </if>
+      <if test="fsostarttime != null">
+        FSOStarttime,
+      </if>
+      <if test="fsoendtime != null">
+        FSOEndtime,
+      </if>
+      <if test="seqnobak != null">
+        SeqNobak,
+      </if>
+      <if test="forbidcnt != null">
+        ForbidCnt,
+      </if>
+      <if test="excludeframediacnt != null">
+        ExcludeFramediaCnt,
+      </if>
+      <if test="designationframediacnt != null">
+        DesignationFramediaCnt,
+      </if>
+      <if test="auditbuildframediacnt != null">
+        AuditBuildFramediaCnt,
+      </if>
+      <if test="producttype != null">
+        ProductType,
+      </if>
+      <if test="uploadframediacounttime != null">
+        UploadFramediaCounttime,
+      </if>
+      <if test="lcdplnid != null">
+        LCDPlnId,
+      </if>
+      <if test="productplaytype != null">
+        ProductPlayType,
+      </if>
+      <if test="inproportion != null">
+        InProportion,
+      </if>
+      <if test="copyrecord != null">
+        CopyRecord,
+      </if>
+      <if test="a2copyd3flag != null">
+        A2CopyD3Flag,
+      </if>
+      <if test="onlineinplay != null">
+        Onlineinplay,
+      </if>
+      <if test="modifyadfrequency != null">
+        ModifyAdFrequency,
+      </if>
+      <if test="ctradcontent != null">
+        CtrAdContent,
+      </if>
+      <if test="selfunion != null">
+        SelfUnion,
+      </if>
+      <if test="selfauder != null">
+        SelfAuder,
+      </if>
+      <if test="screentype != null">
+        ScreenType,
+      </if>
+      <if test="fromtypeSource != null">
+        FromType_Source,
+      </if>
+      <if test="playpicseqno != null">
+        PlayPicSeqNo,
+      </if>
+      <if test="zhizuofinishtime != null">
+        ZhiZuoFinishtime,
+      </if>
+      <if test="zhizuofinishflag != null">
+        ZhiZuoFinishFlag,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="taskid != null">
+        #{taskid,jdbcType=INTEGER},
+      </if>
+      <if test="package != null">
+        #{package,jdbcType=NVARCHAR},
+      </if>
+      <if test="begindate != null">
+        #{begindate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="seqno != null">
+        #{seqno,jdbcType=INTEGER},
+      </if>
+      <if test="plnid != null">
+        #{plnid,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="creator != null">
+        #{creator,jdbcType=VARCHAR},
+      </if>
+      <if test="modifytime != null">
+        #{modifytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifier != null">
+        #{modifier,jdbcType=VARCHAR},
+      </if>
+      <if test="ismanual != null">
+        #{ismanual,jdbcType=BIT},
+      </if>
+      <if test="contractno != null">
+        #{contractno,jdbcType=NVARCHAR},
+      </if>
+      <if test="ordercity != null">
+        #{ordercity,jdbcType=NVARCHAR},
+      </if>
+      <if test="city != null">
+        #{city,jdbcType=NVARCHAR},
+      </if>
+      <if test="adcustomer != null">
+        #{adcustomer,jdbcType=NVARCHAR},
+      </if>
+      <if test="adproduct != null">
+        #{adproduct,jdbcType=NVARCHAR},
+      </if>
+      <if test="adcontent != null">
+        #{adcontent,jdbcType=NVARCHAR},
+      </if>
+      <if test="adstyle != null">
+        #{adstyle,jdbcType=NVARCHAR},
+      </if>
+      <if test="adproperty != null">
+        #{adproperty,jdbcType=NVARCHAR},
+      </if>
+      <if test="adtype != null">
+        #{adtype,jdbcType=NVARCHAR},
+      </if>
+      <if test="adlength != null">
+        #{adlength,jdbcType=NVARCHAR},
+      </if>
+      <if test="adfrequency != null">
+        #{adfrequency,jdbcType=SMALLINT},
+      </if>
+      <if test="weekfrequency != null">
+        #{weekfrequency,jdbcType=SMALLINT},
+      </if>
+      <if test="starttime != null">
+        #{starttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endtime != null">
+        #{endtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="uploadstate != null">
+        #{uploadstate,jdbcType=SMALLINT},
+      </if>
+      <if test="uploadtor != null">
+        #{uploadtor,jdbcType=VARCHAR},
+      </if>
+      <if test="uploadtime != null">
+        #{uploadtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="publishid != null">
+        #{publishid,jdbcType=INTEGER},
+      </if>
+      <if test="pbverno != null">
+        #{pbverno,jdbcType=VARCHAR},
+      </if>
+      <if test="fsocityno != null">
+        #{fsocityno,jdbcType=VARCHAR},
+      </if>
+      <if test="fsopackageno != null">
+        #{fsopackageno,jdbcType=VARCHAR},
+      </if>
+      <if test="fromtype != null">
+        #{fromtype,jdbcType=SMALLINT},
+      </if>
+      <if test="basefrequency != null">
+        #{basefrequency,jdbcType=SMALLINT},
+      </if>
+      <if test="auditstate != null">
+        #{auditstate,jdbcType=SMALLINT},
+      </if>
+      <if test="auditremark != null">
+        #{auditremark,jdbcType=VARCHAR},
+      </if>
+      <if test="auditor != null">
+        #{auditor,jdbcType=VARCHAR},
+      </if>
+      <if test="audittime != null">
+        #{audittime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="meijieauditstate != null">
+        #{meijieauditstate,jdbcType=SMALLINT},
+      </if>
+      <if test="meijieauditremark != null">
+        #{meijieauditremark,jdbcType=VARCHAR},
+      </if>
+      <if test="meijieauditor != null">
+        #{meijieauditor,jdbcType=VARCHAR},
+      </if>
+      <if test="meijieaudittime != null">
+        #{meijieaudittime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="meijieunauditremark != null">
+        #{meijieunauditremark,jdbcType=VARCHAR},
+      </if>
+      <if test="meijieunauditor != null">
+        #{meijieunauditor,jdbcType=VARCHAR},
+      </if>
+      <if test="meijieunaudittime != null">
+        #{meijieunaudittime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="zhizuoauditstate != null">
+        #{zhizuoauditstate,jdbcType=SMALLINT},
+      </if>
+      <if test="zhizuoauditremark != null">
+        #{zhizuoauditremark,jdbcType=VARCHAR},
+      </if>
+      <if test="zhizuoauditor != null">
+        #{zhizuoauditor,jdbcType=VARCHAR},
+      </if>
+      <if test="zhizuoaudittime != null">
+        #{zhizuoaudittime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="bysystem != null">
+        #{bysystem,jdbcType=VARCHAR},
+      </if>
+      <if test="cityno != null">
+        #{cityno,jdbcType=VARCHAR},
+      </if>
+      <if test="packageno != null">
+        #{packageno,jdbcType=VARCHAR},
+      </if>
+      <if test="adtypeno != null">
+        #{adtypeno,jdbcType=VARCHAR},
+      </if>
+      <if test="framediacount != null">
+        #{framediacount,jdbcType=INTEGER},
+      </if>
+      <if test="position != null">
+        #{position,jdbcType=VARCHAR},
+      </if>
+      <if test="productattibute != null">
+        #{productattibute,jdbcType=VARCHAR},
+      </if>
+      <if test="isbuqi != null">
+        #{isbuqi,jdbcType=SMALLINT},
+      </if>
+      <if test="district != null">
+        #{district,jdbcType=VARCHAR},
+      </if>
+      <if test="fsostarttime != null">
+        #{fsostarttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fsoendtime != null">
+        #{fsoendtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="seqnobak != null">
+        #{seqnobak,jdbcType=INTEGER},
+      </if>
+      <if test="forbidcnt != null">
+        #{forbidcnt,jdbcType=INTEGER},
+      </if>
+      <if test="excludeframediacnt != null">
+        #{excludeframediacnt,jdbcType=INTEGER},
+      </if>
+      <if test="designationframediacnt != null">
+        #{designationframediacnt,jdbcType=INTEGER},
+      </if>
+      <if test="auditbuildframediacnt != null">
+        #{auditbuildframediacnt,jdbcType=INTEGER},
+      </if>
+      <if test="producttype != null">
+        #{producttype,jdbcType=VARCHAR},
+      </if>
+      <if test="uploadframediacounttime != null">
+        #{uploadframediacounttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lcdplnid != null">
+        #{lcdplnid,jdbcType=VARCHAR},
+      </if>
+      <if test="productplaytype != null">
+        #{productplaytype,jdbcType=VARCHAR},
+      </if>
+      <if test="inproportion != null">
+        #{inproportion,jdbcType=VARCHAR},
+      </if>
+      <if test="copyrecord != null">
+        #{copyrecord,jdbcType=INTEGER},
+      </if>
+      <if test="a2copyd3flag != null">
+        #{a2copyd3flag,jdbcType=INTEGER},
+      </if>
+      <if test="onlineinplay != null">
+        #{onlineinplay,jdbcType=INTEGER},
+      </if>
+      <if test="modifyadfrequency != null">
+        #{modifyadfrequency,jdbcType=INTEGER},
+      </if>
+      <if test="ctradcontent != null">
+        #{ctradcontent,jdbcType=VARCHAR},
+      </if>
+      <if test="selfunion != null">
+        #{selfunion,jdbcType=NVARCHAR},
+      </if>
+      <if test="selfauder != null">
+        #{selfauder,jdbcType=NVARCHAR},
+      </if>
+      <if test="screentype != null">
+        #{screentype,jdbcType=INTEGER},
+      </if>
+      <if test="fromtypeSource != null">
+        #{fromtypeSource,jdbcType=INTEGER},
+      </if>
+      <if test="playpicseqno != null">
+        #{playpicseqno,jdbcType=INTEGER},
+      </if>
+      <if test="zhizuofinishtime != null">
+        #{zhizuofinishtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="zhizuofinishflag != null">
+        #{zhizuofinishflag,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="selectAllSuit" resultMap="BaseResultMap">
+  	select Top 100 from fam_tb_UploadSchemeOfSuit
+  </select>
+</mapper>

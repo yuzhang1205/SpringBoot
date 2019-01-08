@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.dao.pr_t_OperatorMapper">
+  <resultMap id="BaseResultMap" type="com.demo.entity.pr_t_Operator">
+    <result column="OperatorId" jdbcType="NVARCHAR" property="operatorid" />
+    <result column="OperatorName" jdbcType="NVARCHAR" property="operatorname" />
+    <result column="DeptId" jdbcType="NVARCHAR" property="deptid" />
+    <result column="DeptName" jdbcType="NVARCHAR" property="deptname" />
+    <result column="Duty" jdbcType="NVARCHAR" property="duty" />
+    <result column="JoinTime" jdbcType="TIMESTAMP" property="jointime" />
+    <result column="IsStop" jdbcType="BIT" property="isstop" />
+    <result column="Password" jdbcType="NVARCHAR" property="password" />
+    <result column="EMail" jdbcType="NVARCHAR" property="email" />
+    <result column="Mobile" jdbcType="NVARCHAR" property="mobile" />
+    <result column="Phone" jdbcType="NVARCHAR" property="phone" />
+    <result column="FullName" jdbcType="NVARCHAR" property="fullname" />
+    <result column="LastChangePWDDate" jdbcType="TIMESTAMP" property="lastchangepwddate" />
+    <result column="CreateTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="CreateOperator" jdbcType="NVARCHAR" property="createoperator" />
+    <result column="LastUpdateTime" jdbcType="TIMESTAMP" property="lastupdatetime" />
+    <result column="LastUpdateOperator" jdbcType="NVARCHAR" property="lastupdateoperator" />
+    <result column="IsOperator" jdbcType="BIT" property="isoperator" />
+  </resultMap>
+  <insert id="insert" parameterType="com.demo.entity.pr_t_Operator">
+    insert into pr_t_Operator (OperatorId, OperatorName, DeptId, 
+      DeptName, Duty, JoinTime, 
+      IsStop, Password, EMail, 
+      Mobile, Phone, FullName, 
+      LastChangePWDDate, CreateTime, CreateOperator, 
+      LastUpdateTime, LastUpdateOperator, 
+      IsOperator)
+    values (#{operatorid,jdbcType=NVARCHAR}, #{operatorname,jdbcType=NVARCHAR}, #{deptid,jdbcType=NVARCHAR}, 
+      #{deptname,jdbcType=NVARCHAR}, #{duty,jdbcType=NVARCHAR}, #{jointime,jdbcType=TIMESTAMP}, 
+      #{isstop,jdbcType=BIT}, #{password,jdbcType=NVARCHAR}, #{email,jdbcType=NVARCHAR}, 
+      #{mobile,jdbcType=NVARCHAR}, #{phone,jdbcType=NVARCHAR}, #{fullname,jdbcType=NVARCHAR}, 
+      #{lastchangepwddate,jdbcType=TIMESTAMP}, #{createtime,jdbcType=TIMESTAMP}, #{createoperator,jdbcType=NVARCHAR}, 
+      #{lastupdatetime,jdbcType=TIMESTAMP}, #{lastupdateoperator,jdbcType=NVARCHAR}, 
+      #{isoperator,jdbcType=BIT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.demo.entity.pr_t_Operator">
+    insert into pr_t_Operator
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="operatorid != null">
+        OperatorId,
+      </if>
+      <if test="operatorname != null">
+        OperatorName,
+      </if>
+      <if test="deptid != null">
+        DeptId,
+      </if>
+      <if test="deptname != null">
+        DeptName,
+      </if>
+      <if test="duty != null">
+        Duty,
+      </if>
+      <if test="jointime != null">
+        JoinTime,
+      </if>
+      <if test="isstop != null">
+        IsStop,
+      </if>
+      <if test="password != null">
+        Password,
+      </if>
+      <if test="email != null">
+        EMail,
+      </if>
+      <if test="mobile != null">
+        Mobile,
+      </if>
+      <if test="phone != null">
+        Phone,
+      </if>
+      <if test="fullname != null">
+        FullName,
+      </if>
+      <if test="lastchangepwddate != null">
+        LastChangePWDDate,
+      </if>
+      <if test="createtime != null">
+        CreateTime,
+      </if>
+      <if test="createoperator != null">
+        CreateOperator,
+      </if>
+      <if test="lastupdatetime != null">
+        LastUpdateTime,
+      </if>
+      <if test="lastupdateoperator != null">
+        LastUpdateOperator,
+      </if>
+      <if test="isoperator != null">
+        IsOperator,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="operatorid != null">
+        #{operatorid,jdbcType=NVARCHAR},
+      </if>
+      <if test="operatorname != null">
+        #{operatorname,jdbcType=NVARCHAR},
+      </if>
+      <if test="deptid != null">
+        #{deptid,jdbcType=NVARCHAR},
+      </if>
+      <if test="deptname != null">
+        #{deptname,jdbcType=NVARCHAR},
+      </if>
+      <if test="duty != null">
+        #{duty,jdbcType=NVARCHAR},
+      </if>
+      <if test="jointime != null">
+        #{jointime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isstop != null">
+        #{isstop,jdbcType=BIT},
+      </if>
+      <if test="password != null">
+        #{password,jdbcType=NVARCHAR},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=NVARCHAR},
+      </if>
+      <if test="mobile != null">
+        #{mobile,jdbcType=NVARCHAR},
+      </if>
+      <if test="phone != null">
+        #{phone,jdbcType=NVARCHAR},
+      </if>
+      <if test="fullname != null">
+        #{fullname,jdbcType=NVARCHAR},
+      </if>
+      <if test="lastchangepwddate != null">
+        #{lastchangepwddate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createoperator != null">
+        #{createoperator,jdbcType=NVARCHAR},
+      </if>
+      <if test="lastupdatetime != null">
+        #{lastupdatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastupdateoperator != null">
+        #{lastupdateoperator,jdbcType=NVARCHAR},
+      </if>
+      <if test="isoperator != null">
+        #{isoperator,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  
+</mapper>

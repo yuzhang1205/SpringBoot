@@ -1,0 +1,35 @@
+server:
+  port: 9099
+spring:
+  message:
+    basename:i18n/Messages,i18n/Pages
+  datasource:
+    primary:
+      type: com.alibaba.druid.pool.DruidDataSource                            # 配置当前要使用的数据源的操作类型
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver         # 配置MySQL/sqlserver的驱动程序类
+      jdbc-url: jdbc:sqlserver://localhost:1433;DatabaseName=DB_FAMCenter         # 数据库连接地址  多数据源 使用jdbc-url代替url
+      username: sa                                                            # 数据库用户名
+      password: 123456                                                        # 数据库连接密码
+      filters: stat,wall,log4j
+      dbcp2:                                                                  # 进行数据库连接池的配置
+        min-idle: 5                                                           # 数据库连接池的最小维持连接数
+        initial-size: 5                                                       # 初始化提供的连接数
+        max-total: 5                                                          # 最大的连接数
+        max-wait-millis: 200                                                  # 等待连接获取的最大超时时间
+    second:
+      type: com.alibaba.druid.pool.DruidDataSource                            # 配置当前要使用的数据源的操作类型
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver         # 配置MySQL/sqlserver的驱动程序类
+      jdbc-url: jdbc:sqlserver://localhost:1433;DatabaseName=test                  # 数据库连接地址  多数据源 使用jdbc-url代替url
+      username: sa                                                            # 数据库用户名
+      password: 123456                                                        # 数据库连接密码
+      filters: stat,wall,log4j
+      dbcp2:                                                                  # 进行数据库连接池的配置
+        min-idle: 5                                                           # 数据库连接池的最小维持连接数
+        initial-size: 5                                                       # 初始化提供的连接数
+        max-total: 5                                                          # 最大的连接数
+        max-wait-millis: 200                                                  # 等待连接获取的最大超时时间
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml                        # mybatis配置文件所在路径
+  type-aliases-package: com.demo.entity                                     #mybatis映射的类
+  mapper-locations:
+  - classpath:mybatis/mapper/*.xml                                          #扫描的mybatis生成的xml文件目录
